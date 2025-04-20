@@ -1,0 +1,22 @@
+# Node.js dependencies
+node_modules/
+
+# Compiled JavaScript files
+*.js
+*.js.map
+
+# TypeScript declaration files
+*.d.ts
+
+# Logs
+*.log
+
+# Jest coverage and cache
+coverage/
+.jest/
+
+# TypeScript build folder
+dist/
+
+# System files
+.DS_Store
