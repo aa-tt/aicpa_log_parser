@@ -5,6 +5,11 @@ const logFilePath = path.join(__dirname, 'web.log');
 
 // Function to parse the log file
 function parseLogFile(filePath: string) {
+    if (!fs.existsSync(filePath)) {
+        console.error(`Error: Log file not found. Please ensure 'web.log' is in the same folder as 'logParser.ts'.`);
+        process.exit(1);
+    }
+
     const logData = fs.readFileSync(filePath, 'utf-8');
     const lines = logData.split('\n').filter(line => line.trim() !== '');
 
